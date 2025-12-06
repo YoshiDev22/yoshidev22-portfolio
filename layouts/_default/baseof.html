@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    {{ partial "header.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }} </main>
+
+    {{ partial "footer.html" . }}
+    <button id="backToTop" 
+            aria-label="Volver arriba"
+            class="hidden fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg transition-opacity duration-300 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    {{ partial "scripts.html" . }}
+
+</body>
+</html>

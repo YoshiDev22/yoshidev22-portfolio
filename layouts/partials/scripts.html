@@ -1,0 +1,33 @@
+<script>
+    // --- SCRIPT DE MENÚ MÓVIL ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    // ... (todo tu javascript) ...
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Formulario enviado (simulación). ¡Conecta esto a tu backend!');
+    });
+
+    // --- SCRIPT DE "VOLVER ARRIBA" ---
+    const backToTopButton = document.getElementById('backToTop');
+
+    // 1. Escuchar el evento de scroll
+    window.addEventListener('scroll', () => {
+        // Si el usuario ha bajado más de 300px...
+        if (window.scrollY > 300) {
+            // ...muestra el botón
+            backToTopButton.classList.remove('hidden');
+        } else {
+            // ...si no, ocúltalo
+            backToTopButton.classList.add('hidden');
+        }
+    });
+
+    // 2. Escuchar el clic en el botón
+    backToTopButton.addEventListener('click', () => {
+        // Hacer scroll suavemente hasta el inicio de la página
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>

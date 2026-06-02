@@ -10,27 +10,70 @@
         <form id="contact-form" class="max-w-xl mx-auto mt-12">
             <div class="mb-6">
                 <label for="name" class="block text-slate-300 text-sm font-bold mb-2 text-left">Nombre</label>
-                <input type="text" id="name" name="name" class="w-full bg-slate-700 text-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="Tu Nombre" required>
+                <input type="text" id="name" name="from_name" class="w-full bg-slate-700 text-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="Tu Nombre" required>
             </div>
             <div class="mb-6">
                 <label for="email" class="block text-slate-300 text-sm font-bold mb-2 text-left">Correo Electrónico</label>
-                <input type="email" id="email" name="email" class="w-full bg-slate-700 text-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="tu@email.com" required>
+                <input type="email" id="email" name="from_email" class="w-full bg-slate-700 text-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="tu@email.com" required>
             </div>
             <div class="mb-6">
-                <div class="flex justify-between items-center mb-2">
-                    <label for="message" class="block text-slate-300 text-sm font-bold text-left">Mensaje</label>
-                    <button type="button" id="gemini-contact-btn" class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
-                        ✨ Sugerir borrador (IA)
-                        <span class="loader hidden"></span>
-                    </button>
-                </div>
+                <label for="message" class="block text-slate-300 text-sm font-bold text-left">Mensaje</label>
                 <textarea id="message" name="message" rows="5" class="w-full bg-slate-700 text-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" placeholder="Escribe tu mensaje aquí..." required></textarea>
             </div>
             <div class="text-center">
-                <button type="submit" class="bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold px-10 py-4 rounded-full hover:shadow-lg hover:opacity-90 transition-all transform hover:scale-105 inline-block w-full sm:w-auto">
+                <button type="submit" id="submit-btn" class="bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-bold px-10 py-4 rounded-full hover:shadow-lg hover:opacity-90 transition-all transform hover:scale-105 inline-block w-full sm:w-auto">
                     Enviar Mensaje
                 </button>
             </div>
+            <div id="status-message" class="mt-4 text-center hidden"></div>
         </form>
+        
+        <!-- EmailJS SDK -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // Inicializa EmailJS con tu Public Key
+                // REEMPLAZA 'TU_PUBLIC_KEY' con tu clave pública de EmailJS
+                emailjs.init('TU_PUBLIC_KEY');
+            })();
+            
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const submitBtn = document.getElementById('submit-btn');
+                const statusMessage = document.getElementById('status-message');
+                
+                // Deshabilitar botón y mostrar estado de carga
+                submitBtn.textContent = 'Enviando...';
+                submitBtn.disabled = true;
+                
+                // Enviar correo usando EmailJS
+                // REEMPLAZA 'TU_SERVICE_ID' y 'TU_TEMPLATE_ID' con tus IDs reales
+                emailjs.sendForm('TU_SERVICE_ID', 'TU_TEMPLATE_ID', this)
+                    .then(function() {
+                        // Éxito
+                        statusMessage.textContent = '¡Mensaje enviado correctamente! Me pondré en contacto contigo pronto.';
+                        statusMessage.className = 'mt-4 text-center text-green-400';
+                        statusMessage.classList.remove('hidden');
+                        document.getElementById('contact-form').reset();
+                    }, function(error) {
+                        // Error
+                        statusMessage.textContent = 'Error al enviar el mensaje. Por favor, intenta nuevamente o contáctame directamente por correo.';
+                        statusMessage.className = 'mt-4 text-center text-red-400';
+                        statusMessage.classList.remove('hidden');
+                        console.error('EmailJS Error:', error);
+                    })
+                    .finally(function() {
+                        // Restaurar botón
+                        submitBtn.textContent = 'Enviar Mensaje';
+                        submitBtn.disabled = false;
+                        
+                        // Ocultar mensaje después de 5 segundos
+                        setTimeout(function() {
+                            statusMessage.classList.add('hidden');
+                        }, 5000);
+                    });
+            });
+        </script>
     </div>
 </section>

@@ -1,0 +1,14 @@
+# Archivos generados por Hugo al compilar
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Variables de entorno
+.env
+*.env
+
+# Archivos basura del sistema operativo y editores de código
+Thumbs.db
+.DS_Store
+.vscode/

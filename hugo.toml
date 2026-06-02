@@ -1,3 +1,7 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://yoshidev22.com/'
+languageCode = 'es-mx'
+title = 'Portfolio Yoshio Garcia'
+
+[params]
+  author = 'Yoshi'
+  description = 'Portafolio de proyectos sobre ingeniería, sistemas de control, sistemas embebidos, robótica y desarrollo tecnológico general'

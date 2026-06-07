@@ -1,31 +1,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portafolio | Ingeniero en Sistemas Embebidos</title>
-<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'], // Ahora 'font-sans' usará Inter
+          },
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: '100%', // Evita que el texto sea muy angosto
+              },
+            },
+          },
+        }
+      }
+    }
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
+    /* Aplicamos Inter a todo el cuerpo por si acaso */
     body {
         font-family: 'Inter', sans-serif;
-        background-color: #f8fafc; /* Color de fondo base */
+        background-color: #f8fafc;
     }
-    /* Ajuste para el anclaje de la navegación fija */
+
     section {
         scroll-margin-top: 80px;
     }
-    /* Animación para los iconos flotantes */
+
+    /* Animaciones */
     @keyframes float {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
         100% { transform: translateY(0px); }
     }
     .float-1 { animation: float 3s ease-in-out infinite; }
-    .float-2 { animation: float 3s ease-in-out infinite 0.5s; } /* delay */
-    .float-3 { animation: float 3s ease-in-out infinite 1s; }   /* delay */
+    .float-2 { animation: float 3s ease-in-out infinite 0.5s; }
+    .float-3 { animation: float 3s ease-in-out infinite 1s; }
 
-    /* Animación para la flecha de scroll */
     @keyframes bounce {
         0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
         50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
@@ -33,6 +57,7 @@
     .animate-bounce-slow {
         animation: bounce 2s infinite;
     }
+    
     .gemini-btn-loader {
         width: 1.25rem;
         height: 1.25rem;

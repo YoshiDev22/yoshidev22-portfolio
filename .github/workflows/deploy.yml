@@ -2,14 +2,24 @@ name: Deploy Hugo Site
 on:
   push:
     branches: [ main ]
+
+# Obliga a los despliegues a formarse en una fila para no saturar el servidor
+concurrency:
+  group: deploy-vps
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Actualizar sitio web en VPS
-        uses: appleboy/ssh-action@master
+      - name: Ejecutar script en VPS (Con reintento automático)
+        uses: Wandalen/wretry.action@master
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: /home/yoshi/Proyectos/deploy.sh
+          action: appleboy/ssh-action@master
+          with: |
+            host: ${{ secrets.VPS_HOST }}
+            username: ${{ secrets.VPS_USER }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            script: /home/yoshi/Proyectos/deploy.sh
+          # Intenta hasta 4 veces, esperando 15 segundos entre cada intento fallido
+          attempt_limit: 4
+          attempt_delay: 15000

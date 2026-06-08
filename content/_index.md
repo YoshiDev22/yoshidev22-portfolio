@@ -1,3 +1,3 @@
 ---
-title: "Inicio"
+title: "Mi Blog"
 ---

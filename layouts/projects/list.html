@@ -1,0 +1,157 @@
+{{ define "main" }}
+<section class="bg-slate-50 min-h-screen py-20">
+    <div class="container mx-auto px-6">
+
+        <!-- Encabezado -->
+        <div class="max-w-2xl mx-auto text-center mb-16">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Proyectos</h1>
+            <p class="text-slate-500 text-lg">Publicaciones técnicas y desarrollos en los que he participado a lo largo de mi carrera.</p>
+        </div>
+
+        <!-- Bloque 1: Publicaciones en Hackster.io -->
+        <div class="mb-20">
+            <div class="flex flex-wrap items-center gap-3 mb-8">
+                <h2 class="text-2xl font-bold text-slate-800">Publicaciones en Hackster.io</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Tarjeta 1: FaultyCat -->
+                <a href="https://www.hackster.io/electronic-cats/faultycat-fault-induction-through-electromagnetic-pulses-23d9e9"
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300">
+                    <img src="/images/hackster/Faulty_Cat.avif" alt="FaultyCat" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">FaultyCat: Fault Induction Through Electromagnetic Pulses</h3>
+                        <p class="text-slate-600 text-sm flex-grow">Herramienta de inyección de fallas electromagnéticas (EMFI) para encontrar vulnerabilidades en microcontroladores. Diseño de bajo costo con batería integrada, recuperación rápida entre pulsos y operación segura mediante aislamiento de alta tensión.</p>
+                        <div class="flex flex-wrap gap-2 mt-4 mb-4">
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">RP2040</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">EMFI</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">Seguridad</span>
+                        </div>
+                        <span class="text-blue-600 text-sm font-semibold flex items-center gap-1">
+                            Ver en Hackster.io
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 2: MagSpoof V4 -->
+                <a href="https://www.hackster.io/electronic-cats/magspoof-v4-getting-started-7c97af"
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300">
+                    <img src="/images/hackster/Magspoof_V4.avif" alt="MagSpoof V4" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">MagSpoof V4 Getting Started</h3>
+                        <p class="text-slate-600 text-sm flex-grow">Dispositivo para emular o suplantar cualquier tarjeta con banda magnética mediante un campo electromagnético. Basado en el microcontrolador CH552G, compatible con Arduino y diseño open-source.</p>
+                        <div class="flex flex-wrap gap-2 mt-4 mb-4">
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">CH552G</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">USB-C</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">Seguridad</span>
+                        </div>
+                        <span class="text-blue-600 text-sm font-semibold flex items-center gap-1">
+                            Ver en Hackster.io
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 3: Paw Protector -->
+                <a href="https://www.hackster.io/electronic-cats/paw-protector-the-ultimate-armor-for-your-usb-devices-b23ae5"
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300">
+                    <img src="/images/hackster/PawProtector.avif" alt="Paw Protector" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">Paw Protector: The Ultimate Armor for Your USB Devices</h3>
+                        <p class="text-slate-600 text-sm flex-grow">Protector USB que bloquea la transferencia de datos mientras carga tu dispositivo a máxima velocidad. Incluye chip SmartCharge con soporte para estándares Apple, Samsung y carga universal hasta 2.4A.</p>
+                        <div class="flex flex-wrap gap-2 mt-4 mb-4">
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">USB</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">Hardware</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">Seguridad</span>
+                        </div>
+                        <span class="text-blue-600 text-sm font-semibold flex items-center gap-1">
+                            Ver en Hackster.io
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Bloque 2: Proyectos destacados agrupados -->
+        <div>
+            <h2 class="text-2xl font-bold text-slate-800 mb-8">Proyectos Destacados</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Área 1: Sistemas Embebidos & IoT -->
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Sistemas Embebidos & IoT</h3>
+                    <ul class="space-y-3">
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+                            <p class="font-semibold text-slate-900 text-sm">Dispositivos de Tracking con ESP32</p>
+                            <p class="text-slate-600 text-xs mt-1">Diseño de prototipo y programación de dispositivos de rastreo de activos con conectividad Wi-Fi y BLE.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+                            <p class="font-semibold text-slate-900 text-sm">Monitoreo y Control de Nivel de Agua</p>
+                            <p class="text-slate-600 text-xs mt-1">Sistema embebido para monitoreo y control automático de nivel en tanques industriales.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+                            <p class="font-semibold text-slate-900 text-sm">Interfaces Industriales RS-232 y RS-485</p>
+                            <p class="text-slate-600 text-xs mt-1">Obtención y procesamiento de datos mediante protocolos de comunicación serial industrial.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+                            <p class="font-semibold text-slate-900 text-sm">Tarjetas de Adquisición de Datos</p>
+                            <p class="text-slate-600 text-xs mt-1">Diseño de PCB con protocolos industriales para captura y procesamiento de señales analógicas y digitales.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Área 2: Robótica & Mecatrónica -->
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Robótica & Mecatrónica</h3>
+                    <ul class="space-y-3">
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-indigo-400">
+                            <p class="font-semibold text-slate-900 text-sm">Prótesis de Mano Experimental</p>
+                            <p class="text-slate-600 text-xs mt-1">Diseño y construcción de prótesis con actuadores y firmware de control embebido.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-indigo-400">
+                            <p class="font-semibold text-slate-900 text-sm">Hexápodo Caminante</p>
+                            <p class="text-slate-600 text-xs mt-1">Robot de seis patas con locomoción coordinada por servos gestionados mediante firmware.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-indigo-400">
+                            <p class="font-semibold text-slate-900 text-sm">Vehículos y Control RC</p>
+                            <p class="text-slate-600 text-xs mt-1">Diseño de prototipo de vehículos RC, restauración de chasis y desarrollo de nuevos sistemas de control.</p>
+                        </li>
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-indigo-400">
+                            <p class="font-semibold text-slate-900 text-sm">Control de Motor con Técnicas Robustas</p>
+                            <p class="text-slate-600 text-xs mt-1">Implementación de estrategias de control avanzadas (PID, control robusto) para motores eléctricos.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Área 3: Actualmente trabajando -->
+                <div>
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4">Actualmente Trabajando</h3>
+                    <ul class="space-y-3">
+                        <li class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-cyan-400">
+                            <div class="flex items-center gap-2 mb-1">
+                                <p class="font-semibold text-slate-900 text-sm">Clasificación de Señales Biomédicas</p>
+                                <span class="bg-cyan-100 text-cyan-700 text-xs font-semibold px-2 py-0.5 rounded-full">En curso</span>
+                            </div>
+                            <p class="text-slate-600 text-xs">Clasificación mediante Transformada Wavelet combinada con redes neuronales y otros métodos de aprendizaje automático.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="mt-12 text-center text-slate-500 text-sm italic">
+                Próximamente estaré publicando tutoriales y proyectos nuevos.
+            </p>
+        </div>
+
+    </div>
+</section>
+{{ end }}

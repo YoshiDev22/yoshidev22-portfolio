@@ -1,56 +1,61 @@
-<section id="projects" class="bg-white py-20">
+<section id="projects" class="bg-slate-50 py-20">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Proyectos Destacados</h2>
-        <p class="text-center text-slate-500 mb-12">Haz clic en el botón ✨ para ver una descripción alternativa generada por la API de Gemini.</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-slate-50 rounded-lg shadow-md overflow-hidden flex flex-col">
-                <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Proyecto+1" alt="[Imagen del Proyecto 1]" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="project-title font-bold text-xl mb-2 text-slate-900">Sistema de Monitoreo Ambiental</h3>
-                    <p class="project-description text-slate-600 mb-4 flex-grow">Dispositivo IoT que mide la calidad del aire (CO2, VOCs) y la envía a una plataforma en la nube vía Wi-Fi.</p>
-                    <div class="project-tags flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">ESP32</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">FreeRTOS</span>
-                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MQTT</span>
-                    </div>
-                    <button class="gemini-project-btn mt-auto text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors self-start flex items-center gap-2">
-                        ✨ Ver descrip. alternativa (IA)
-                        <span class="loader hidden"></span>
-                    </button>
-                </div>
+
+        <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Proyectos</h2>
+        <p class="text-center text-slate-500 mb-12">Una selección de publicaciones y desarrollos en los que he participado.</p>
+
+        <!-- Publicaciones en Hackster.io (preview: 2 tarjetas) -->
+        <div class="mb-10">
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+                <h3 class="text-lg font-bold text-slate-800">Publicaciones en Hackster.io</h3>
             </div>
-            <div class="bg-slate-50 rounded-lg shadow-md overflow-hidden flex flex-col">
-                <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Proyecto+2" alt="[Imagen del Proyecto 2]" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="project-title font-bold text-xl mb-2 text-slate-900">Controlador de Motor BLE</h3>
-                    <p class="project-description text-slate-600 mb-4 flex-grow">Firmware para un microcontrolador STM32 que permite controlar la velocidad y dirección de un motor DC a través de una app móvil.</p>
-                    <div class="project-tags flex flex-wrap gap-2 mb-4">
-                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">STM32</span>
-                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Bluetooth Low Energy</span>
-                        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">C++</span>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl">
+
+                <!-- Tarjeta 1: FaultyCat -->
+                <a href="https://www.hackster.io/electronic-cats/faultycat-fault-induction-through-electromagnetic-pulses-23d9e9"
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-white rounded-lg shadow-md overflow-hidden flex items-center gap-4 p-4 group hover:shadow-lg transition-shadow duration-300">
+                    <img src="/images/hackster/Faulty_Cat.avif" alt="FaultyCat" class="w-12 h-12 flex-shrink-0 rounded-md object-cover">
+                    <div class="min-w-0">
+                        <p class="font-semibold text-slate-900 text-sm leading-tight group-hover:text-blue-600 transition-colors">FaultyCat</p>
+                        <p class="text-xs text-slate-500 mt-0.5">Fault Induction via EMFI</p>
                     </div>
-                    <button class="gemini-project-btn mt-auto text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors self-start flex items-center gap-2">
-                        ✨ Ver descrip. alternativa (IA)
-                        <span class="loader hidden"></span>
-                    </button>
-                </div>
-            </div>
-            <div class="bg-slate-50 rounded-lg shadow-md overflow-hidden flex flex-col">
-                <img src="https://placehold.co/600x400/F97316/FFFFFF?text=Proyecto+3" alt="[Imagen del Proyecto 3]" class="w-full h-48 object-cover">
-                <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="project-title font-bold text-xl mb-2 text-slate-900">Nodo Sensor LoRaWAN</h3>
-                    <p class="project-description text-slate-600 mb-4 flex-grow">Dispositivo de ultra bajo consumo alimentado por batería que envía datos de sensores a kilómetros de distancia.</p>
-                    <div class="project-tags flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">LoRaWAN</span>
-                        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Bajo Consumo</span>
-                        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">C</span>
+                </a>
+
+                <!-- Tarjeta 2: MagSpoof V4 -->
+                <a href="https://www.hackster.io/electronic-cats/magspoof-v4-getting-started-7c97af"
+                   target="_blank" rel="noopener noreferrer"
+                   class="bg-white rounded-lg shadow-md overflow-hidden flex items-center gap-4 p-4 group hover:shadow-lg transition-shadow duration-300">
+                    <img src="/images/hackster/Magspoof_V4.avif" alt="MagSpoof V4" class="w-12 h-12 flex-shrink-0 rounded-md object-cover">
+                    <div class="min-w-0">
+                        <p class="font-semibold text-slate-900 text-sm leading-tight group-hover:text-blue-600 transition-colors">MagSpoof V4</p>
+                        <p class="text-xs text-slate-500 mt-0.5">Getting Started</p>
                     </div>
-                    <button class="gemini-project-btn mt-auto text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors self-start flex items-center gap-2">
-                        ✨ Ver descrip. alternativa (IA)
-                        <span class="loader hidden"></span>
-                    </button>
-                </div>
+                </a>
+
             </div>
         </div>
+
+        <!-- Proyectos destacados (solo nombres) -->
+        <div class="mb-10">
+            <h3 class="text-lg font-bold text-slate-800 mb-6">Proyectos Destacados</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-w-4xl">
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-blue-400">Dispositivos de Tracking con ESP32</li>
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-blue-400">Monitoreo y Control de Nivel de Agua</li>
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-blue-400">Interfaces Industriales RS-232 y RS-485</li>
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-indigo-400">Prótesis de Mano Experimental</li>
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-indigo-400">Hexápodo Caminante</li>
+                <li class="bg-white rounded-md shadow-sm px-4 py-2.5 text-sm text-slate-700 border-l-4 border-indigo-400">Vehículos y Control RC</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <a href="/projects/"
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold px-6 py-3 rounded-full hover:shadow-lg hover:opacity-90 transition-all transform hover:scale-105">
+            Ver todos los proyectos
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
     </div>
 </section>

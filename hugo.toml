@@ -1,12 +1,7 @@
 baseURL = 'https://yoshidev22.com/'
 languageCode = 'es-mx'
 title = 'Portfolio Yoshio Garcia'
-googleAnalytics = "G-2NS1JG2PSX"
 
 [params]
   author = 'Yoshi'
   description = 'Portafolio de proyectos sobre ingeniería, sistemas de control, sistemas embebidos, robótica y desarrollo tecnológico general'
-
-[services]
-  [services.googleAnalytics]
-    id = 'G-2NS1JG2PSX'

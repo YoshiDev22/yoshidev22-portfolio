@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: yoshidev22/mi-portfolio-hugo
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Entradas del Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Borrador (Draft)", name: "draft", widget: "boolean", default: true}
+      - {label: "Contenido", name: "body", widget: "markdown"}
